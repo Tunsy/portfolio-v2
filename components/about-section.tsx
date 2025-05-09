@@ -41,40 +41,40 @@ export default function AboutSection() {
 
                         <div className="flex space-x-4">
                             <Link href="https://github.com/Tunsy" target="_blank" rel="noopener noreferrer">
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="
-                                rounded-full
-                                border-white/20 
-                                bg-black/30 
-                                transition-shadow duration-200
-                                hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
-                                hover:bg-purple-600/20
-                                hover:border-purple-400
-                                hover:text-purple-400"
-                            >
-                                <Github className="h-5 w-5" />
-                                <span className="sr-only">GitHub</span>
-                            </Button>
+                                <Button
+                                    variant="outline"
+                                    size="icon"
+                                    className="
+                                    rounded-full
+                                    border-white/20 
+                                    bg-black/30 
+                                    transition-shadow duration-200
+                                    hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
+                                    hover:bg-purple-600/20
+                                    hover:border-purple-400
+                                    hover:text-purple-400"
+                                >
+                                    <Github className="h-5 w-5" />
+                                    <span className="sr-only">GitHub</span>
+                                </Button>
                             </Link>
                             <Link href="https://linkedin.com/in/jonthnngyn" target="_blank" rel="noopener noreferrer">
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="
-                                rounded-full
-                                border-white/20 
-                                bg-black/30 
-                                transition-shadow duration-200
-                                hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
-                                hover:bg-purple-600/20
-                                hover:border-purple-400
-                                hover:text-purple-400"
-                            >
-                                <Linkedin className="h-5 w-5" />
-                                <span className="sr-only">LinkedIn</span>
-                            </Button>
+                                <Button
+                                    variant="outline"
+                                    size="icon"
+                                    className="
+                                    rounded-full
+                                    border-white/20 
+                                    bg-black/30 
+                                    transition-shadow duration-200
+                                    hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
+                                    hover:bg-purple-600/20
+                                    hover:border-purple-400
+                                    hover:text-purple-400"
+                                >
+                                    <Linkedin className="h-5 w-5" />
+                                    <span className="sr-only">LinkedIn</span>
+                                </Button>
                             </Link>
                         </div>
                     </motion.div>

@@ -72,15 +72,15 @@ export default function ContactSection() {
                         </Button>
                     </form> */}
 
-                        <div className="pl-8 mb-8 pt-8 border-white/10">
-                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div className="mb-8 pt-8 border-white/10">
+                            <div className="flex flex-col justify-center items-center gap-8">
                             <div className="flex items-center">
                                 <Mail className="h-5 w-5 mr-2 text-gray-400" />
                                 <a href="mailto:jonthnngyn@gmail.com" className="text-gray-300 hover:text-white">
                                 jonthnngyn@gmail.com
                                 </a>
                             </div>
-                            <div className="space-x-4 mr-2">
+                            <div className="flex items-center gap-8">
                                 <Link href="https://github.com/Tunsy" target="_blank" rel="noopener noreferrer">
                                     <Button
                                         variant="outline"
