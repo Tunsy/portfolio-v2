@@ -11,6 +11,7 @@ import ExperienceSection from "@/components/experience-section"
 import SkillsTabs from "@/components/skills-tab";
 import HeroSection from "@/components/hero-section"
 import { useMobile } from "@/hooks/use-mobile"
+import AboutSection from "@/components/about-section"
 
 export default function Portfolio() {
   const ref = useRef(null)
@@ -69,97 +70,15 @@ export default function Portfolio() {
       <HeroSection/>
 
       {/* About Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="max-w-5xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">About Me</span>
-          </h2>
+      <AboutSection/>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm"
-              initial={{ scaleY: 0, opacity: 0 }}
-              whileInView={{ scaleY: 1, opacity: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: 0.6, // 👈 add this
-              }}
-              viewport={{ once: true, amount: 0.5 }}
-              style={{ transformOrigin: "center" }}
-            >
-              <img
-                src="/placeholder.svg?height=600&width=600"
-                alt="Profile"
-                className="h-full w-full object-cover"
-            />
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold mb-4">Front-End Engineer & UI/UX Enthusiast</h3>
-              <p className="text-gray-300 mb-6">
-                With over 5 years of experience building modern web applications, I specialize in creating responsive,
-                accessible, and performant user interfaces that deliver exceptional user experiences.
-              </p>
-              <p className="text-gray-300 mb-8">
-                I'm passionate about clean code, design systems, and the intersection of technology and design. When I'm
-                not coding, you'll find me exploring new technologies, contributing to open source, or sketching UI
-                concepts.
-              </p>
-
-              <div className="flex space-x-4">
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-white/20 bg-black/30 hover:bg-white/10"
-                  >
-                    <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
-                  </Button>
-                </Link>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-white/20 bg-black/30 hover:bg-white/10"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-white/20 bg-black/30 hover:bg-white/10"
-                  >
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+      {/* Skills Section */}
+      <SkillsTabs/>
 
       {/* Experience Section */}
       <ExperienceSection />
 
-      {/* Skills Section */}
-      <SkillsTabs/>
+
 
 
 

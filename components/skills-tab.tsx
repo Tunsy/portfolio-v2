@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils"
 const skillCategories = {
   "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C#", "PHP"],
   "Frameworks & Libraries": ["React.js", "Next.js", "Node.js", "Redux", "Spring Boot", "Thrift", "GraphQL", "Tailwind CSS", "Framer Motion"],
-  "DevOps & Tools": ["Git", "Docker", "Jenkins", "Jest", "Apache Maven", "JUnit", "Jest"],
-  "Databases": ["MongoDB", "PostgreSQL", "MySQL"],
+  "DevOps & Tools": ["Git", "Docker", "Jenkins", "Apache Maven", "JUnit", "Jest"],
+  "Databases": ["MongoDB", "PostgreSQL", "MySQL", "NoSQL"],
 };
 
 export default function SkillsTabs() {
