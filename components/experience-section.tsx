@@ -2,8 +2,10 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Calendar, MapPin, ExternalLink } from "lucide-react"
+import { Calendar, MapPin, ExternalLink, ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 // Define the experience data structure
 interface Experience {
@@ -14,79 +16,69 @@ interface Experience {
   location: string
   description: string[]
   technologies: string[]
-  website?: string
-  type: string // Full-time, Contract, etc.
+  website: string
 }
 
-// Sample experience data
 const experiences: Experience[] = [
   {
-    id: "apple",
-    company: "Apple",
-    position: "Senior Frontend Engineer",
-    dateRange: "Jan 2021 - Present",
-    location: "Cupertino, CA",
-    type: "Full-time",
+    id: "houzz",
+    company: "Houzz",
+    position: "Software Engineer - Revenue/Growth",
+    dateRange: "Oct 2021 - July 2023",
+    location: "Palo Alto, CA",
     description: [
-      "Led the development of key features for Apple's internal design system used by over 200 product teams",
-      "Architected and implemented a component library that reduced development time by 40%",
-      "Collaborated with design and product teams to create intuitive user interfaces",
-      "Mentored junior developers and conducted code reviews to maintain high code quality",
-      "Optimized application performance resulting in a 30% improvement in load times",
+      "Boosted Monthly Recurring Revenue by over $200,000 by leveraging cookie-based tracking to identify pro types (e.g. designers, contractors) and dynamically tailoring page content to their needs, increasing conversion rates",
+      "Optimized checkout flow by working with designers and PMs to implement critical features, including building front-end components and back-end integrations for PayPal/Apple Pay and guest checkout",
+      "Increased free-trial starts by over 40% and improved customer acquisition through data-driven A/B testing on different layouts and content on high-traffic pages including the landing page (10,000,000+ monthly visits)",
+      "Collaborated cross-functionally with the Onboarding team to experiment with various feature configurations and tiered software packages, optimizing pricing and offerings to maximize revenue and improve conversion rates",
+      "Led the development of an internal testing tool that automated test account creation, environment setup, and cookie management, reducing QA setup time by hours per week and improving developer efficiencys",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL", "Tailwind CSS", "Jest", "Cypress"],
-    website: "https://apple.com",
+    technologies: ["React.js", "JavaScript", "TypeScript", "Redux", "Python", "GraphQL", "PHP", "Thrift", "Jest"],
+    website: "https://houzz.com/pro",
   },
   {
-    id: "google",
-    company: "Google",
-    position: "Frontend Developer",
-    dateRange: "Mar 2018 - Dec 2020",
-    location: "Mountain View, CA",
-    type: "Full-time",
+    id: "ibm",
+    company: "IBM",
+    position: "Software Engineer - Db2 Modernization",
+    dateRange: "May 2019 - Oct 2021",
+    location: "San Jose, CA",
     description: [
-      "Developed responsive web applications for Google Cloud Platform",
-      "Built interactive data visualization dashboards using D3.js",
-      "Implemented A/B testing framework that increased user engagement by 25%",
-      "Contributed to open-source projects and internal tools",
-      "Worked in an agile environment with cross-functional teams",
+      "Worked on full‑stack development in React.js, Java, and Spring Boot to modernize various IBM Db2 software used by DBAs and enterprises globally like Walmart and Wells",
+      "Collaborated with engineers, designers, and product owners to deliver dashboards, monitoring tools, and database management interfaces that generate millions in revenue",
+      "Enhanced QA efficiency by integrating Jenkins, Docker, JUnit, and Jest into our CI pipeline—cutting manual testing time by 10+ hours per week",
+      "Mentored multiple cohorts of interns, ramping them to productive developers and full‑time hires",
     ],
-    technologies: ["Angular", "JavaScript", "D3.js", "Firebase", "Material Design", "RxJS", "Jasmine"],
-    website: "https://google.com",
+    technologies: ["React.js", "JavaScript", "Redux", "Java", "Spring Boot", "JUnit", "Docker", "Jenkins", "Node.js", "Jest"],
+    website: "https://www.ibm.com/db2",
   },
   {
-    id: "meta",
-    company: "Meta",
-    position: "UI Engineer",
-    dateRange: "Jun 2016 - Feb 2018",
-    location: "Menlo Park, CA",
-    type: "Full-time",
+    id: "playstation",
+    company: "Sony PlayStation",
+    position: "Software Engineer - PlayStation Plus",
+    dateRange: "Jun 2018 - Dec 2018",
+    location: "Aliso Viejo, CA",
     description: [
-      "Created responsive and accessible user interfaces for Facebook's ad platform",
-      "Developed reusable components and utilities that improved developer productivity",
-      "Collaborated with UX researchers to implement user feedback and improve usability",
-      "Optimized rendering performance for complex list views and data grids",
-      "Participated in hackathons and innovation projects",
+      "Built Spring Boot REST APIs for PlayStation Plus (Formerly PS Now), handling streaming and server allocation",
+      "Wrote scripts to facilitate game distribution and streaming across thousands of servers",
+      "Ported legacy monolithic services into standalone microservices",
+      "Ensured production‑grade quality with comprehensive JUnit test coverage",
     ],
-    technologies: ["React", "Redux", "CSS-in-JS", "Flow", "Jest", "Enzyme", "GraphQL"],
-    website: "https://meta.com",
+    technologies: ["Java", "Spring Boot", "Python", "JUnit", "Jest"],
+    website: "https://www.playstation.com/en-us/ps-plus/",
   },
   {
-    id: "freelance",
-    company: "Freelance",
-    position: "Frontend Consultant",
-    dateRange: "Jan 2015 - May 2016",
-    location: "Remote",
-    type: "Contract",
+    id: "cox",
+    company: "Cox Automotive",
+    position: "Software Engineer Intern - Kelley Blue Book",
+    dateRange: "Jun 2017 - Dec 2017",
+    location: "Irvine, CA",
     description: [
-      "Designed and developed custom websites and web applications for various clients",
-      "Created responsive layouts and interactive UI components",
-      "Implemented e-commerce solutions and payment integrations",
-      "Provided technical consultation and solutions architecture",
-      "Managed client relationships and project timelines",
+      "Learned how to write high quality, industry level code and used C# and Microsoft SQL to create and optimize various services and stored procedures for ads services team.",
+      "Upgraded and optimized a program that downloads phone leads data to the database every day by reducing the runtime from ~3 hours to ~45 minutes, and upgrading the technologies",
+      "Ported over APIs to web in preparation for migrating to AWS for improved reliability and scalability",
     ],
-    technologies: ["JavaScript", "HTML5", "CSS3", "jQuery", "WordPress", "Shopify", "SASS"],
-    website: "",
+    technologies: ["C#", "Python", "MySQL"],
+    website: "https://www.kbb.com/",
   },
 ]
 
@@ -149,9 +141,6 @@ export default function ExperienceSection() {
                   <div className="space-y-2">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                       <h3 className="text-2xl font-bold">{activeExperience.position}</h3>
-                      <span className="px-3 py-1 rounded-full bg-white/10 text-sm font-medium">
-                        {activeExperience.type}
-                      </span>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 text-gray-300 text-sm">
@@ -202,6 +191,22 @@ export default function ExperienceSection() {
                       ))}
                     </div>
                   </div>
+                  <Link href={activeExperience.website}>
+                    <Button variant="outline" 
+                            className="
+                            mt-6
+                            border-white/20 
+                            bg-black/30 
+                            transition-shadow duration-200
+                            hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
+                            hover:bg-purple-600/20
+                            hover:border-purple-400
+                            hover:text-purple-400"
+                         >
+                      Check it out!
+                      <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Button>
+                  </Link>
                 </motion.div>
               </AnimatePresence>
             </div>

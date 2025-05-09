@@ -78,10 +78,6 @@ export default function Portfolio() {
       {/* Experience Section */}
       <ExperienceSection />
 
-
-
-
-
       {/* Projects Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <motion.div
