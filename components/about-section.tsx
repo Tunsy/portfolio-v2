@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin} from "lucide-react"
 import Link from "next/link"
+import ProfileReveal from "./profile-reveal";
 
 export default function AboutSection() {
     return (
@@ -20,24 +21,7 @@ export default function AboutSection() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                    className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm"
-                    initial={{ scaleY: 0, opacity: 0 }}
-                    whileInView={{ scaleY: 1, opacity: 1 }}
-                    transition={{
-                        duration: 0.5,
-                        ease: "easeOut",
-                        delay: 0.6, // 👈 add this
-                    }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    style={{ transformOrigin: "center" }}
-                    >
-                    <img
-                        src="/placeholder.svg?height=600&width=600"
-                        alt="Profile"
-                        className="h-full w-full object-cover"
-                    />
-                    </motion.div>
+                    <ProfileReveal/>
 
                     <motion.div
                     initial={{ x: 50, opacity: 0 }}

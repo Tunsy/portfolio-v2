@@ -53,7 +53,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           <Link href={project.link}>
-            <Button variant="outline" className="w-full border-white/10 bg-black/30 hover:bg-white/10 group">
+            <Button variant="outline" 
+                    className="
+                    mt-6
+                    border-white/20 
+                    bg-black/30 
+                    transition-shadow duration-200
+                    hover:shadow-[0_0_8px_rgba(168,85,247,0.7)] 
+                    hover:bg-purple-600/20
+                    hover:border-purple-400
+                    hover:text-purple-400">
               View Project
               <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Button>

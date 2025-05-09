@@ -29,7 +29,7 @@ export default function GradientBackground({ scrollYProgress }: GradientBackgrou
         }}
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.6, 0.8, 0.6],
+          opacity: [0.6, 0.9, 0.6],
           filter: ["blur(80px)", "blur(100px)", "blur(80px)"],
           backgroundColor: [
             "rgba(59, 130, 246, 0.2)",
@@ -54,8 +54,8 @@ export default function GradientBackground({ scrollYProgress }: GradientBackgrou
           backgroundColor: "rgba(168, 85, 247, 0.2)", // Tailwind's purple-500/20
         }}
         animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.5, 0.7, 0.5],
+          scale: [1, 1.3, 1],
+          opacity: [0.5, 0.9, 0.5],
           filter: ["blur(90px)", "blur(110px)", "blur(90px)"],
           backgroundColor: [
             "rgba(168, 85, 247, 0.2)",
@@ -81,7 +81,7 @@ export default function GradientBackground({ scrollYProgress }: GradientBackgrou
         }}
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.5, 0.75, 0.5],
+          opacity: [0.3, 0.8, 0.3],
           filter: ["blur(80px)", "blur(120px)", "blur(80px)"],
           backgroundColor: [
             "rgba(236, 72, 153, 0.2)",

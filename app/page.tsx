@@ -5,13 +5,13 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Code, Github, Linkedin, Mail, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import ProjectCard from "@/components/project-card"
 import GradientBackground from "@/components/gradient-background"
 import ExperienceSection from "@/components/experience-section"
 import SkillsTabs from "@/components/skills-tab";
 import HeroSection from "@/components/hero-section"
 import { useMobile } from "@/hooks/use-mobile"
 import AboutSection from "@/components/about-section"
+import ProjectsSection from "@/components/projects-section" 
 
 export default function Portfolio() {
   const ref = useRef(null)
@@ -22,30 +22,6 @@ export default function Portfolio() {
 
   const isMobile = useMobile()
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
-
-  const projects = [
-    {
-      title: "E-commerce Platform",
-      description: "A full-featured online store with cart functionality and payment processing",
-      tags: ["React", "Next.js", "Stripe", "Tailwind CSS"],
-      image: "/placeholder.svg?height=600&width=800",
-      link: "#",
-    },
-    {
-      title: "Dashboard UI",
-      description: "An analytics dashboard with interactive charts and data visualization",
-      tags: ["TypeScript", "D3.js", "Framer Motion", "Tailwind CSS"],
-      image: "/placeholder.svg?height=600&width=800",
-      link: "#",
-    },
-    {
-      title: "Social Media App",
-      description: "A responsive social platform with real-time messaging and notifications",
-      tags: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
-      image: "/placeholder.svg?height=600&width=800",
-      link: "#",
-    },
-  ]
 
   const skills = [
     "JavaScript",
@@ -79,34 +55,7 @@ export default function Portfolio() {
       <ExperienceSection />
 
       {/* Projects Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="max-w-6xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-              Featured Projects
-            </span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
-              <Github className="mr-2 h-4 w-4" />
-              View More on GitHub
-            </Button>
-          </div>
-        </motion.div>
-      </section>
+      <ProjectsSection/>
 
       {/* Contact Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
@@ -201,16 +150,6 @@ export default function Portfolio() {
                       >
                         <Linkedin className="h-5 w-5" />
                         <span className="sr-only">LinkedIn</span>
-                      </Button>
-                    </Link>
-                    <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="rounded-full border-white/20 bg-black/30 hover:bg-white/10"
-                      >
-                        <Twitter className="h-5 w-5" />
-                        <span className="sr-only">Twitter</span>
                       </Button>
                     </Link>
                   </div>
