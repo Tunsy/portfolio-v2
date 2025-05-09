@@ -3,11 +3,8 @@
 import { motion, type MotionValue } from "framer-motion"
 import ParticleBackground from "./particle-background"
 
-interface GradientBackgroundProps {
-  scrollYProgress: MotionValue<number>
-}
 
-export default function GradientBackground({ scrollYProgress }: GradientBackgroundProps) {
+export default function GradientBackground() {
   return (
     <>
       {/* Fixed background with stars */}

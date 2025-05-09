@@ -40,7 +40,7 @@ export default function AboutSection() {
                         </p>
 
                         <div className="flex space-x-4">
-                            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://github.com/Tunsy" target="_blank" rel="noopener noreferrer">
                             <Button
                                 variant="outline"
                                 size="icon"
@@ -58,7 +58,7 @@ export default function AboutSection() {
                                 <span className="sr-only">GitHub</span>
                             </Button>
                             </Link>
-                            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://linkedin.com/in/jonthnngyn" target="_blank" rel="noopener noreferrer">
                             <Button
                                 variant="outline"
                                 size="icon"
