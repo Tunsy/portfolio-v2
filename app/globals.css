@@ -72,3 +72,8 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
+/* enable gradient text on all browsers */
+.bg-clip-text {
+  -webkit-text-fill-color: transparent;
+}

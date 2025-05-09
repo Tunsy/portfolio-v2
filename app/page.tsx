@@ -9,6 +9,7 @@ import ProjectCard from "@/components/project-card"
 import SkillBadge from "@/components/skill-badge"
 import GradientBackground from "@/components/gradient-background"
 import ExperienceSection from "@/components/experience-section"
+import SkillsTabs from "@/components/skills-tab";
 import { useMobile } from "@/hooks/use-mobile"
 
 export default function Portfolio() {
@@ -193,33 +194,9 @@ export default function Portfolio() {
       <ExperienceSection />
 
       {/* Skills Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="max-w-5xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
-              My Skills
-            </span>
-          </h2>
+      <SkillsTabs/>
 
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3 md:gap-4"
-          >
-            {skills.map((skill, index) => (
-              <SkillBadge key={index} name={skill} delay={index * 0.1} />
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
+
 
       {/* Projects Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
