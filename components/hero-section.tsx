@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -24,12 +25,16 @@ export default function HeroSection() {
           I love building things and solving problems across the entire stack.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button size="lg" className="bg-white text-black hover:bg-gray-200">
-            View My Work
-          </Button>
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
-            Contact Me
-          </Button>
+          <Link href="#experience" passHref>
+            <Button size="lg" className="bg-white text-black hover:bg-gray-200">
+              View My Work
+            </Button>
+          </Link>
+          <a href="mailto:jonthnngyn@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
+              Contact Me
+            </Button>
+          </a>
         </div>
       </motion.div>
 

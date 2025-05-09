@@ -88,7 +88,7 @@ export default function ExperienceSection() {
   const activeExperience = experiences.find((exp) => exp.id === activeTab) || experiences[0]
 
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="relative py-24 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
