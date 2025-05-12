@@ -26,7 +26,7 @@ export default function ProfileReveal() {
       viewport={{ once: true, amount: 0.5 }}
     >
       <img
-        src="/images/profile.jpg"
+        src="/images/profile2.jpg"
         alt="Profile"
         className="h-full w-full object-cover"
       />
