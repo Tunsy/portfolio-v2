@@ -7,20 +7,14 @@ import Link from "next/link"
 
 export default function ContactSection() {
     return (
-        <section id="contact"className="relative py-24 px-4 sm:px-6 lg:px-8">
+        <section id="contact"className="relative">
             <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="max-w-4xl mx-auto"
+            className="mx-auto"
             >
-                <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-                    <span className="bg-gradient-to-r from-pink-400 to-blue-500 text-transparent bg-clip-text">
-                    Get In Touch
-                    </span>
-                </h2>
-
                 <div className="relative rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-xl
     +                  pointer-events-none z-0"></div>

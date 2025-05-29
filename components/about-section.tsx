@@ -32,13 +32,12 @@ export default function AboutSection() {
                         <h3 className="text-2xl font-semibold mb-4">Software Engineer & Full Stack Developer</h3>
                         <p className="text-gray-300 mb-6">
                             With almost 5 years of experience building modern web applications across companies like PlayStation, IBM, 
-                            and Houzz, I love everything from building UIs that deliver exceptional user experiences, to 
+                            and Houzz, I love everything from building exceptional UIs, to 
                             solving complex end-to-end challenges.
                         </p>
                         <p className="text-gray-300 mb-8">
-                            I'm currently seeking new opportunities! Let's connect if you're hiring!
+                            Take a look at my resume  <a href="/docs/2025swe.pdf" className="text-purple-400 hover:text-purple-200 transition-colors duration-200">here!</a>
                         </p>
-
                         <div className="flex space-x-4">
                             <Link href="https://github.com/Tunsy" target="_blank" rel="noopener noreferrer">
                                 <Button

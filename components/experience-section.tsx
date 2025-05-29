@@ -43,7 +43,7 @@ const experiences: Experience[] = [
     dateRange: "May 2019 - Oct 2021",
     location: "San Jose, CA",
     description: [
-      "Worked on full‑stack development in React.js, Java, and Spring Boot to modernize various IBM Db2 software used by DBAs and enterprises globally like Walmart and Wells",
+      "Worked on full‑stack development in React.js, Java, and Spring Boot to modernize various IBM Db2 software used by DBAs and enterprises globally like Walmart and Wells Fargo",
       "Collaborated with engineers, designers, and product owners to deliver dashboards, monitoring tools, and database management interfaces that generate millions in revenue",
       "Enhanced QA efficiency by integrating Jenkins, Docker, JUnit, and Jest into our CI pipeline—cutting manual testing time by 10+ hours per week",
       "Mentored multiple cohorts of interns, ramping them to productive developers and full‑time hires",
@@ -152,7 +152,7 @@ export default function ExperienceSection() {
                         <MapPin className="h-4 w-4 mr-2 text-gray-400" />
                         {activeExperience.location}
                       </div>
-                      {activeExperience.website && (
+                      {/* {activeExperience.website && (
                         <a
                           href={activeExperience.website}
                           target="_blank"
@@ -162,7 +162,7 @@ export default function ExperienceSection() {
                           <ExternalLink className="h-4 w-4 mr-2 text-gray-400" />
                           Website
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </div>
 
