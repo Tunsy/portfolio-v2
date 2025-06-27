@@ -26,7 +26,7 @@ export default function ProjectsSection() {
             description: "An app to keep up habit streaks with your friends",
             tags: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Supabase"],
             image: "/images/streakbuddy.png",
-            link: "#",
+            link: "https://streakbuddy.app",
         },
     ];
 
