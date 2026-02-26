@@ -38,7 +38,7 @@ const experiences: Experience[] = [
         >
           Crusoe Command Center
         </Link>
-        , giving cloud customers a single pane of glass to monitor usage, costs, and performance across fleets
+        , giving cloud customers a single place to monitor usage, health, logs, and performance across fleets
       </>,
       "Implement bucket and object storage workflows end-to-end, from UX flows to API integrations, allowing customers to manage large-scale data on Crusoe Cloud",
       "Collaborate cross-functionally with designers, product managers, and stakeholders to refine UX, scope features, drive alignment, and secure buy-in for Cloud Customer Experience initiatives",
@@ -89,7 +89,7 @@ const experiences: Experience[] = [
   {
     id: "playstation",
     company: "Sony PlayStation",
-    position: "Software Engineer - PlayStation Plus",
+    position: "Software Engineer Intern - PlayStation Plus",
     dateRange: "Jun 2018 - Dec 2018",
     location: "Aliso Viejo, CA",
     description: [
