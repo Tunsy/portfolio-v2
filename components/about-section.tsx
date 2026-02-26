@@ -29,10 +29,10 @@ export default function AboutSection() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
                     >
-                        <h3 className="text-2xl font-semibold mb-4">Software Engineer & Full Stack Developer</h3>
+                        <h3 className="text-2xl font-semibold mb-4">Software Engineer</h3>
                         <p className="text-gray-300 mb-6">
-                            With almost 5 years of experience building modern web applications across companies like PlayStation, IBM, 
-                            and Houzz, I love everything from building exceptional UIs, to 
+                            With 5 years of experience building modern web applications across companies like PlayStation, IBM, 
+                            and Crusoe, I love everything from building exceptional UIs, working with data, and
                             solving complex end-to-end challenges.
                         </p>
                         <p className="text-gray-300 mb-8">

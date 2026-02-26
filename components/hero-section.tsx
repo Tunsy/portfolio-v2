@@ -22,7 +22,7 @@ export default function HeroSection() {
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 text-gray-300">Software Engineer</h2>
         <p className="text-lg sm:text-xl mb-10 text-gray-400 max-w-2xl mx-auto">
-          I love building things and solving problems across the entire stack.
+          Building the Future of AI Cloud Infrastructure @ Crusoe
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="#experience" passHref>

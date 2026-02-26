@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import type { ReactNode } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Calendar, MapPin, ExternalLink, ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -14,12 +15,46 @@ interface Experience {
   position: string
   dateRange: string
   location: string
-  description: string[]
+  description: ReactNode[]
   technologies: string[]
   website: string
 }
 
 const experiences: Experience[] = [
+  {
+    id: "crusoe",
+    company: "Crusoe",
+    position: "Software Engineer - Cloud Customer Experience",
+    dateRange: "Oct 2025 - Present",
+    location: "San Francisco, CA",
+    description: [
+      <>
+        Design and build UI for{" "}
+        <Link
+          href="https://www.crusoe.ai/resources/blog/introducing-crusoe-command-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-purple-400 underline-offset-2 hover:underline"
+        >
+          Crusoe Command Center
+        </Link>
+        , giving cloud customers a single pane of glass to monitor usage, costs, and performance across fleets
+      </>,
+      "Implement bucket and object storage workflows end-to-end, from UX flows to API integrations, allowing customers to manage large-scale data on Crusoe Cloud",
+      "Collaborate cross-functionally with designers, product managers, and stakeholders to refine UX, scope features, drive alignment, and secure buy-in for Cloud Customer Experience initiatives",
+      "Build and extend additional Crusoe Cloud clients, including the CLI and Terraform provider, to give customers flexible ways to interact with Crusoe infrastructure",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Go",
+      "Kubernetes",
+      "Cloud Infrastructure",
+      "Terraform",
+      "Claude Code",
+    ],
+    website: "https://www.crusoe.ai/",
+  },
   {
     id: "houzz",
     company: "Houzz",

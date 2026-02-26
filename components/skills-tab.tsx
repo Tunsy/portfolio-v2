@@ -6,9 +6,29 @@ import SkillBadge from "@/components/skill-badge"
 import { cn } from "@/lib/utils"
 
 const skillCategories = {
-  "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C#", "PHP"],
-  "Frameworks & Libraries": ["React.js", "Next.js", "Node.js", "Redux", "Spring Boot", "Thrift", "GraphQL", "Tailwind CSS", "Framer Motion"],
-  "DevOps & Tools": ["Git", "Docker", "Jenkins", "Apache Maven", "JUnit", "Jest"],
+  "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C#", "PHP", "Go"],
+  "Frameworks & Libraries": [
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Redux",
+    "Spring Boot",
+    "Thrift",
+    "GraphQL",
+    "Tailwind CSS",
+    "Framer Motion",
+  ],
+  "DevOps & Tools": [
+    "Git",
+    "Docker",
+    "Jenkins",
+    "Apache Maven",
+    "JUnit",
+    "Jest",
+    "Kubernetes",
+    "Terraform",
+    "Claude Code",
+  ],
   "Databases": ["MongoDB", "PostgreSQL", "MySQL", "NoSQL"],
 };
 
