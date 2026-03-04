@@ -36,7 +36,7 @@ export default function AboutSection() {
                             solving complex end-to-end challenges.
                         </p>
                         <p className="text-gray-300 mb-8">
-                            Take a look at my resume  <a href="/docs/2025swe.pdf" className="text-purple-400 hover:text-purple-200 transition-colors duration-200">here!</a>
+                            Take a look at my resume  <a href="/docs/2026swe.pdf" className="text-purple-400 hover:text-purple-200 transition-colors duration-200">here!</a>
                         </p>
                         <div className="flex space-x-4">
                             <Link href="https://github.com/Tunsy" target="_blank" rel="noopener noreferrer">
