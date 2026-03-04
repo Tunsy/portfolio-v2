@@ -22,11 +22,11 @@ export default function ProjectsSection() {
             link: "https://github.com/Tunsy/Poke-ARena",
         },
         {
-            title: "StreakBuddy",
-            description: "An app to keep up habit streaks with your friends",
-            tags: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Supabase"],
-            image: "/images/streakbuddy.png",
-            link: "https://streakbuddy.app",
+            title: "Fireworks LLM Playground",
+            description: "A playground built on the Fireworks API that lets you experiment with prompts in an LLM-style chat interface.",
+            tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+            image: "/images/fireworks-playground.png",
+            link: "https://fireworks-playground-cp117r5rx-jonthnngyn-8251s-projects.vercel.app/",
         },
     ];
 
