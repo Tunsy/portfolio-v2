@@ -31,9 +31,7 @@ export default function AboutSection() {
                     >
                         <h3 className="text-2xl font-semibold mb-4">Software Engineer</h3>
                         <p className="text-gray-300 mb-6">
-                            With 5 years of experience building modern web applications across companies like PlayStation, IBM, 
-                            and Crusoe, I love everything from building exceptional UIs, working with data, and
-                            solving complex end-to-end challenges.
+                            I like making computers talk to other computers, but these computers happen to be really good at multiplying a lot of numbers together.
                         </p>
                         <p className="text-gray-300 mb-8">
                             Take a look at my resume  <a href="/docs/2026swe.pdf" className="text-purple-400 hover:text-purple-200 transition-colors duration-200">here!</a>
